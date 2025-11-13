@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --coverage"
   },
   "author": "",
   "license": "MIT",
@@ -29,6 +29,7 @@
       "src/toNumber.js",
       "src/toString.js"
     ],
-    "coverageReporters": ["lcov", "text"]
+    "coverageReporters": ["lcov", "text"],
+    "transform": {}
   }
 }

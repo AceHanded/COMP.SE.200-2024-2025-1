@@ -1,5 +1,6 @@
 # COMP.SE.200 - Software Testing Assignment
 
+[![License](https://img.shields.io/github/license/AceHanded/COMP.SE.200-2024-2025-1?style=for-the-badge)](https://github.com/otula/COMP.SE.200-2024-2025-1)
 [![Coveralls](https://img.shields.io/coveralls/github/AceHanded/COMP.SE.200-2024-2025-1/main.svg?style=for-the-badge)](https://coveralls.io/github/AceHanded/COMP.SE.200-2024-2025-1?branch=main)
 
 ## List of Tested Files

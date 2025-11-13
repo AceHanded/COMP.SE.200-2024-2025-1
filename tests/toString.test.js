@@ -1,5 +1,7 @@
 /* toString.test.js */
 
-test("placeholder", () => {
+import toString from '../src/toString.js';
+
+test('placeholder', () => {
   expect(true).toBe(true);
 });

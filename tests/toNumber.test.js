@@ -1,5 +1,7 @@
 /* toNumber.test.js */
 
-test("placeholder", () => {
+import toNumber from '../src/toNumber.js';
+
+test('placeholder', () => {
   expect(true).toBe(true);
 });

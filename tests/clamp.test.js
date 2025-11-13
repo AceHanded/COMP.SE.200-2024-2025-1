@@ -1,5 +1,7 @@
 /* clamp.test.js */
 
-test("placeholder", () => {
+import clamp from '../src/clamp.js';
+
+test('placeholder', () => {
   expect(true).toBe(true);
 });

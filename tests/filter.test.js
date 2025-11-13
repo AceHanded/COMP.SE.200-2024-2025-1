@@ -1,5 +1,7 @@
 /* filter.test.js */
 
-test("placeholder", () => {
+import filter from '../src/filter.js';
+
+test('placeholder', () => {
   expect(true).toBe(true);
 });

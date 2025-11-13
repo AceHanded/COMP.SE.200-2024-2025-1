@@ -1,5 +1,7 @@
 /* add.test.js */
 
-test("placeholder", () => {
+import add from '../src/add.js';
+
+test('placeholder', () => {
   expect(true).toBe(true);
 });

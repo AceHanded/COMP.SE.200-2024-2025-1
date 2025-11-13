@@ -1,5 +1,7 @@
 /* eq.test.js */
 
-test("placeholder", () => {
+import eq from '../src/eq.js';
+
+test('placeholder', () => {
   expect(true).toBe(true);
 });

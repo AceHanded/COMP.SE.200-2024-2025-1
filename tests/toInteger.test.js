@@ -1,5 +1,7 @@
 /* toInteger.test.js */
 
-test("placeholder", () => {
+import toInteger from '../src/toInteger.js';
+
+test('placeholder', () => {
   expect(true).toBe(true);
 });

@@ -1,5 +1,7 @@
 /* reduce.test.js */
 
-test("placeholder", () => {
+import reduce from '../src/reduce.js';
+
+test('placeholder', () => {
   expect(true).toBe(true);
 });
