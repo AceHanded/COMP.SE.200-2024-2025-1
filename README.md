@@ -1,4 +1,19 @@
-# Student template
+# COMP.SE.200 - Software Testing Assignment
+
+[![Coveralls](https://img.shields.io/coveralls/github/AceHanded/COMP.SE.200-2024-2025-1/main.svg?style=for-the-badge)](https://coveralls.io/github/AceHanded/COMP.SE.200-2024-2025-1?branch=main)
+
+## List of Tested Files
+
+1. `add.js`
+2. `clamp.js`
+3. `divide.js`
+4. `eq.js`
+5. `filter.js`
+6. `map.js`
+7. `reduce.js`
+8. `toInteger.js`
+9. `toNumber.js`
+10. `toString.js`
 
 ## Purpose of this repository
 

@@ -5,10 +5,30 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no tests are implemented yet \" && exit 1"
+    "test": "jest --coverage"
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "coveralls": "^3.1.1",
+    "jest": "^30.2.0",
+    "jest-chain": "^1.1.6",
+    "jest-extended": "^7.0.0"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/add.js",
+      "src/clamp.js",
+      "src/divide.js",
+      "src/eq.js",
+      "src/filter.js",
+      "src/map.js",
+      "src/reduce.js",
+      "src/toInteger.js",
+      "src/toNumber.js",
+      "src/toString.js"
+    ],
+    "coverageReporters": ["lcov", "text"]
+  }
 }
