@@ -30,6 +30,7 @@
       "src/toString.js"
     ],
     "coverageReporters": ["lcov", "text"],
+    "setupFilesAfterEnv": ["jest-extended/all", "jest-chain"],
     "transform": {}
   }
 }
