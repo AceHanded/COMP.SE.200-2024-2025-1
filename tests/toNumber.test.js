@@ -2,7 +2,12 @@
 
 import toNumber from '../src/toNumber.js';
 
-const test_object = (n,m) => n+m;
+const test_symbol = Symbol(64);
+
+const test_obj = {
+  name: 'test',
+  valueOf: 4 //Overrides the valueOf method with a Number
+}
 
 describe('toNumber', () => {
   test('Value type is Number', () => {
@@ -47,19 +52,24 @@ describe('toNumber', () => {
     expect(toNumber('0o62')).toBe(50);
   });
 
-  test('Value is boolean', () => {
+  test.failing('Value is an empty string', () => {
+    expect(toNumber('')).toBe(NaN);
+    expect(toNumber(' ')).toBe(NaN);
+  });
+
+  test('Value type is Symbol', () => {
+    expect(toNumber(test_symbol)).toBe(NaN);
+  });
+
+  test('Value type is Boolean', () => {
     expect(toNumber(true)).toBe(1);
     expect(toNumber(false)).toBe(0);
   });
 
   test('Value is an object', () => {
-    expect(toNumber(test_object('3','5'))).toBe(35);
     expect(toNumber([1,2])).toBe(NaN);
-  });
-
-  test.failing('Value is empty string', () => {
-    expect(toNumber('')).toBe(NaN);
-    expect(toNumber(' ')).toBe(NaN);
+    expect(toNumber(Object(0))).toBe(0);
+    expect(toNumber(test_obj)).toBe(NaN);
   });
 
   test('Value is undefined', () => {
