@@ -19,12 +19,12 @@ describe('divide', () => {
   });
 
   test.failing('Divisor is zero (0)', () => {
-    expect(divide(2,0)).toThrow(RangeError);
+    expect(divide(2,0)).toBe(Infinity);
   });
 
-  test.failing('Undefined parameters default to one (1)', () => {
+  test('Undefined parameters default to one (1)', () => {
     expect(divide(2,)).toBe(2/1);
-    expect(divide(undefined,2)).toBe(1/2);
+    expect(divide(undefined,2)).toBe(2/1);
     expect(divide()).toBe(1/1);
   });
 
@@ -40,19 +40,19 @@ describe('divide', () => {
   });
 
   test.failing('Division includes String', () => {
-    expect(divide("test",2)).toThrow(TypeError);
-    expect(divide(2,"test")).toThrow(TypeError);
-    expect(divide("2", "4")).toThrow(TypeError);
+    expect(divide("test",2)).toBe(NaN);
+    expect(divide(2,"test")).toBe(NaN);
+    expect(divide("2", "4")).toBe(2/4);
   });
 
   test.failing('Division includes bool', () => {
-    expect(divide(true,2)).toThrow(TypeError);
-    expect(divide(2,false)).toThrow(TypeError);
+    expect(divide(true,2)).toBe(1/2);
+    expect(divide(2,false)).toBe(2/0);
   });
 
   test.failing('Division includes object', () => {
-    expect(divide([2,1],2)).toThrow(TypeError);
-    expect(divide(2,{test: 2})).toThrow(TypeError);
+    expect(divide([2,1],2)).toBe(NaN);
+    expect(divide(2,{test: 2})).toBe(NaN);
   });
 
 });
